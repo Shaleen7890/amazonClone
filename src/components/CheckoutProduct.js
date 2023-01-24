@@ -25,7 +25,7 @@ function CheckoutProduct({ id, title, price, image, category, description, hasPr
                     <StarIcon className='h-5 text-yellow-500' />
                 ))}</div>
                 <p className='text-sm my-2 line-clamp-2'>{description}</p>
-                <CurrencyFormat value={price} prefix={'$'} />
+                <CurrencyFormat value={price} prefix={'Rs.'} />
                 {hasPrime && (
                     <div className='flex items-center space-x-2'>
                         <img loading='lazy' src='https://links.papareact.com/fdw' alt='...' className='w-12' />
@@ -37,8 +37,6 @@ function CheckoutProduct({ id, title, price, image, category, description, hasPr
                 <button className='button' onClick={addItemToBasket}>Add to Basket</button>
                 <button className='button' onClick={removeItemFromBasket}>Remove from Basket</button>
             </div>
-
-
         </div>
     )
 }
